@@ -39,5 +39,16 @@ public class Contact {
 	@Column(name ="UPDATED_DATE",insertable = false)
 	@UpdateTimestamp
 	private LocalDate updateDate;
+	public char getActiveSwitch() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	public void setActiveSwitch(char c) {
+		// TODO Auto-generated method stub
+		
+	}
 
 }
+
+
+
