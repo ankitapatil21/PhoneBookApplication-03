@@ -25,20 +25,27 @@ public class Contact {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name ="CONTACT_ID")
 	private Integer contactId;
+	
 	@Column(name ="CONTACT_NAME")
 	private String contactName;
+	
 	@Column(name ="CONTACT_NUMBER")
 	private String contactNumber;
+	
 	@Column(name ="CONTACT_EMAIL")
 	private String contactEmail;
+	
 	@Column(name ="ACTIVE_SWITCH")
 	private Character activeSwitch;
+	
 	@Column(name ="CREATED_DATE",updatable = false)
 	@CreationTimestamp
 	private LocalDate createdDate;
+	
 	@Column(name ="UPDATED_DATE",insertable = false)
 	@UpdateTimestamp
 	private LocalDate updateDate;
+	
 	public char getActiveSwitch() {
 		// TODO Auto-generated method stub
 		return 0;
@@ -47,6 +54,52 @@ public class Contact {
 		// TODO Auto-generated method stub
 		
 	}
+	public Integer getContactId() {
+		return contactId;
+	}
+	public void setContactId(Integer contactId) {
+		this.contactId = contactId;
+	}
+	public String getContactName() {
+		return contactName;
+	}
+	public void setContactName(String contactName) {
+		this.contactName = contactName;
+	}
+	public String getContactNumber() {
+		return contactNumber;
+	}
+	public void setContactNumber(String contactNumber) {
+		this.contactNumber = contactNumber;
+	}
+	public String getContactEmail() {
+		return contactEmail;
+	}
+	public void setContactEmail(String contactEmail) {
+		this.contactEmail = contactEmail;
+	}
+	public LocalDate getCreatedDate() {
+		return createdDate;
+	}
+	public void setCreatedDate(LocalDate createdDate) {
+		this.createdDate = createdDate;
+	}
+	public LocalDate getUpdateDate() {
+		return updateDate;
+	}
+	public void setUpdateDate(LocalDate updateDate) {
+		this.updateDate = updateDate;
+	}
+	public void setActiveSwitch(Character activeSwitch) {
+		this.activeSwitch = activeSwitch;
+	}
+	@Override
+	public String toString() {
+		return "Contact [contactId=" + contactId + ", contactName=" + contactName + ", contactNumber=" + contactNumber
+				+ ", contactEmail=" + contactEmail + ", activeSwitch=" + activeSwitch + ", createdDate=" + createdDate
+				+ ", updateDate=" + updateDate + "]";
+	}
+	
 
 }
 
